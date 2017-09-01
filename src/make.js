@@ -25,8 +25,8 @@ export default (options) => {
 
       // call pouchDB and send result to cycle app
       callPouchDB(database, event).then(
-        data => { listener.next({ database: name, action, data }) },
-        data => { listener.next({ database: name, action, data }) },
+        (data) => { listener.next({ database: name, action, data }) },
+        (data) => { listener.next({ database: name, action, data }) },
       )
     }
 
